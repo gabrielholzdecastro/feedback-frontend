@@ -31,7 +31,6 @@ export default function SetoresTable() {
     })();
   }, []);
 
-
   return (
     <>
       <TableContainer component={Paper}>
@@ -45,13 +44,8 @@ export default function SetoresTable() {
           </TableHead>
           <TableBody>
             {data.map((setor) => (
-              <TableRow
-                key={setor.id}
-                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-              >
-                <TableCell component="th" scope="row">
-                  {setor.id}
-                </TableCell>
+              <TableRow key={setor.id} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                <TableCell component="th" scope="row"> {setor.id} </TableCell>
                 <TableCell align="right">{setor.nome}</TableCell>
                 <TableCell align="right">{setor.descricao}</TableCell>
               </TableRow>

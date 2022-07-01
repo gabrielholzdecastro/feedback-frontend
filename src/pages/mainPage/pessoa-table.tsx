@@ -49,13 +49,8 @@ export default function PessoasTable() {
           </TableHead>
           <TableBody>
             {data.map((pessoa) => (
-              <TableRow
-                key={pessoa.id}
-                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-              >
-                <TableCell component="th" scope="row">
-                  {pessoa.id}
-                </TableCell>
+              <TableRow key={pessoa.id} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                <TableCell component="th" scope="row"> {pessoa.id}</TableCell>
                 <TableCell align="right">{pessoa.nome}</TableCell>
                 <TableCell align="right">{pessoa.email}</TableCell>
                 <TableCell align="right">{pessoa.setor != null ? pessoa.setor.nome : 'N/A'}</TableCell>
